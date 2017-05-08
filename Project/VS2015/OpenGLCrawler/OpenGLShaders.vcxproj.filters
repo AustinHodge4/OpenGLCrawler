@@ -1,0 +1,122 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="Resource Files\Shaders">
+      <UniqueIdentifier>{76ec9bbc-09ca-420c-9d34-025e7f7b99b3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resource Files\Shaders\sprite">
+      <UniqueIdentifier>{c08dff41-86a4-4660-ba3d-3c3cae7ac0fd}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resource Files\Shaders\default">
+      <UniqueIdentifier>{9d731889-bc42-478d-be4c-6fee2baa4137}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resource Files\Shaders\toon">
+      <UniqueIdentifier>{b5dcdd7d-f217-4db6-8a2c-19da7cfb37f9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resource Files\Shaders\lighting">
+      <UniqueIdentifier>{272bcbdc-ae9f-4b1a-9389-ee489d37a24c}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\..\source\Camera2D.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\source\main.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\source\ShaderManager.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\source\shader\Shader.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\source\Texture.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\source\Sprite.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\source\Display.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\source\Application.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\source\Playing.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\source\GameState.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\..\source\Camera2D.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\source\ShaderManager.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\source\shader\Shader.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\source\Texture.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\source\Sprite.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\source\Display.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\source\Application.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\source\GameState.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\source\Playing.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\..\..\media\shaders\sprite\SpriteFragmentShader.frag">
+      <Filter>Resource Files\Shaders\sprite</Filter>
+    </None>
+    <None Include="..\..\..\media\shaders\sprite\SpriteVertexShader.vs">
+      <Filter>Resource Files\Shaders\sprite</Filter>
+    </None>
+    <None Include="..\..\..\media\shaders\toon\ToonFragmentShader.frag">
+      <Filter>Resource Files\Shaders\toon</Filter>
+    </None>
+    <None Include="..\..\..\media\shaders\toon\ToonVertexShader.vs">
+      <Filter>Resource Files\Shaders\toon</Filter>
+    </None>
+    <None Include="..\..\..\media\shaders\default\DefaultFragmentShader.frag">
+      <Filter>Resource Files\Shaders\default</Filter>
+    </None>
+    <None Include="..\..\..\media\shaders\default\DefaultVertexShader.vs">
+      <Filter>Resource Files\Shaders\default</Filter>
+    </None>
+    <None Include="..\..\..\media\shaders\lighting\LampFragmentShader.frag">
+      <Filter>Resource Files\Shaders\lighting</Filter>
+    </None>
+    <None Include="..\..\..\media\shaders\lighting\LightFragmentShader.frag">
+      <Filter>Resource Files\Shaders\lighting</Filter>
+    </None>
+    <None Include="..\..\..\media\shaders\lighting\LightVertexShader.vs">
+      <Filter>Resource Files\Shaders\lighting</Filter>
+    </None>
+  </ItemGroup>
+</Project>

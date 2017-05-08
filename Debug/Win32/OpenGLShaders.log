@@ -1,0 +1,11 @@
+﻿C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\Common7\IDE\VC\VCTargets\Microsoft.CppBuild.targets(372,5): warning MSB8004: Intermediate Directory does not end with a trailing slash.  This build instance will add the slash as it is required to allow proper evaluation of the Intermediate Directory.
+C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\Common7\IDE\VC\VCTargets\Microsoft.CppBuild.targets(373,5): warning MSB8004: Output Directory does not end with a trailing slash.  This build instance will add the slash as it is required to allow proper evaluation of the Output Directory.
+  Playing.cpp
+  SOIL.lib(stb_image_aug.obj) : MSIL .netmodule or module compiled with /GL found; restarting link with /LTCG; add /LTCG to the link command line to improve linker performance
+LINK : warning LNK4075: ignoring '/INCREMENTAL' due to '/LTCG' specification
+LINK : warning LNK4098: defaultlib 'MSVCRT' conflicts with use of other libs; use /NODEFAULTLIB:library
+  Generating code
+  Finished generating code
+SOIL.lib(stb_image_aug.obj) : warning LNK4099: PDB 'SOIL.pdb' was not found with 'SOIL.lib(stb_image_aug.obj)' or at 'C:\Users\austin\Documents\Visual Studio 2015\Projects\OpenGLCrawler\Debug\Win32\SOIL.pdb'; linking object as if no debug info
+  OpenGLShaders.vcxproj -> C:\Users\austin\Documents\Visual Studio 2015\Projects\OpenGLCrawler\Project\VS2015\OpenGLCrawler\..\..\..\Debug\Win32\OpenGLCrawler.exe
+  OpenGLShaders.vcxproj -> ..\..\..\Debug\Win32\OpenGLCrawler.pdb (Partial PDB)
