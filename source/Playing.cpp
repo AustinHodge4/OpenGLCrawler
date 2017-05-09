@@ -1,21 +1,27 @@
 #include "Playing.h"
 #include "Sprite.h"
 #include "Texture.h"
-#include "ShaderManager.h"
 
 namespace State {
-	
-	ShaderManager shaderManager;
-	State::Playing::Playing(Application& application) : GameState(application),
-					m_sprite({ -0.1f, -0.1f, 0.0f, 1.0f,
-								0.1f, -0.1f, 1.0f, 1.0f,
-								0.1f,  0.1f, 1.0f, 0.0f,
-								-0.1f,  -0.1f, 0.0f, 1.0f, 
-								-0.1f,  0.1f, 0.0f, 0.0f,
-								0.1f,  0.1f, 1.0f, 0.0f })
+	std::vector<GLfloat> vertices{
+		-0.1f, -0.1f,
+		0.1f, -0.1f,
+		0.1f, 0.1f,
+		-0.1f, 0.1f,
+	};
+	std::vector<GLfloat> texCoords{
+		0.0f, 1.0f,
+		1.0f, 1.0f,
+		1.0f, 0.0f,
+		0.0f, 0.0f,
+	};
+	std::vector<GLuint> indices{
+		0, 1, 3,
+		1, 2, 3
+	};
+	State::Playing::Playing(Application& application) : GameState(application), m_sprite(vertices, texCoords, indices)
 	{
-
-		shaderManager.InitializeShaders();
+		m_spriteTexture.Load("../../media/textures/playerArrow.png");
 	}
 
 	State::Playing::~Playing()
@@ -25,6 +31,7 @@ namespace State {
 
 	void State::Playing::input()
 	{
+
 	}
 
 	void State::Playing::update()
@@ -34,20 +41,20 @@ namespace State {
 
 	void State::Playing::draw()
 	{
-		static Texture texture("../../media/textures/playerArrow.png");
+		deltaTime = glfwGetTime() - lastFrame;
+		lastFrame = deltaTime;
 
-		glActiveTexture(GL_TEXTURE0);
-		texture.Bind();
-		glUniform1i(glGetUniformLocation(shaderManager.m_pSprite.Program, "Sprite"), 0);
-		glUniform2f(glGetUniformLocation(shaderManager.m_pSprite.Program, "clip"), 0, 4);
-		glUniform2f(glGetUniformLocation(shaderManager.m_pSprite.Program, "rowCol"), 13, 21);
-
-		shaderManager.m_pSprite.Use();
+		m_spriteShader.Bind();
 		m_sprite.Bind();
-		glDrawArrays(GL_TRIANGLES, 0, 6);
-		m_sprite.Unbind();
-		texture.Unbind();
+		m_spriteTexture.Bind();
+		m_spriteShader.SetUniformVariables();
 
+		glDrawElements(GL_TRIANGLES, m_sprite.GetEboCount(), GL_UNSIGNED_INT, nullptr);
+
+		m_spriteTexture.Unbind();
+		m_sprite.Unbind();
+		m_spriteShader.UnBind();
+		
 	}
 	
 }

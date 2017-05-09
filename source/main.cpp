@@ -11,11 +11,6 @@
 #include "Application.h"
 
 
-// Engine Time
-GLdouble deltaTime = 0.0;
-GLdouble lastFrame = 0.0;
-
-
 glm::mat3 GetNormalMatrix(glm::mat4 matrix) {
 	return glm::mat3(glm::transpose(glm::inverse(matrix)));
 }
